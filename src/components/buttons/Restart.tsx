@@ -1,8 +1,8 @@
-type ResetProps = {
+type RestartProps = {
     handleReset: () => void;
 };
 
-const Reset = ({ handleReset }: ResetProps) => {
+const Restart = ({ handleReset }: RestartProps) => {
     return (
         <button
             className="border-0 rounded-xl text-xl px-8 bg-[#EC5656] text-white"
@@ -13,4 +13,4 @@ const Reset = ({ handleReset }: ResetProps) => {
     );
 };
 
-export default Reset;
+export default Restart;

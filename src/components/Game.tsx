@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Board from './Board';
 import GameMode from './GameMode';
 import Title from '../components/Title';
-import Reset from './buttons/Reset';
+import Restart from '../components/buttons/Restart';
 
 type GameState = {
     gameOver: boolean;
@@ -41,7 +41,7 @@ const Game = () => {
             />
             <div className="flex w-96 justify-around">
                 <GameMode handleGameModeChange={handleGameModeChange} value={gameMode} />
-                <Reset handleReset={handleReset} />
+                <Restart handleReset={handleReset} />
             </div>
         </main>
     );
