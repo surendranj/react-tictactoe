@@ -71,7 +71,7 @@ const Board = ({
                 setxIsNext(true);
             }
             setGameState(gameState => {
-                return { ...gameState, gameStatus: 'Next player: ' + (xIsNext ? 'X' : 'O') };
+                return { ...gameState, gameStatus: `${xIsNext ? 'X' : 'O'} Turn` };
             });
         }
     }, [gameMode, setGameState, setSquares, setxIsNext, squares, xIsNext]);
@@ -81,11 +81,11 @@ const Board = ({
     };
 
     return (
-        <section>
-            <table className="border-hidden">
-                <thead className="border-hidden">
+        <section className="w-fit">
+            <table className=" border-hidden ">
+                <thead className="border-hidden h-4">
                     <tr>
-                        <th>{gameState.gameStatus}</th>
+                        <th colSpan={3}>{gameState.gameStatus}</th>
                     </tr>
                 </thead>
                 <tbody className="relative">

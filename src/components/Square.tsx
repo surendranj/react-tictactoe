@@ -1,3 +1,6 @@
+import X from './X';
+import O from './O';
+
 type SquareProps = {
     value: string | null;
     handleClick: () => void;
@@ -6,14 +9,10 @@ type SquareProps = {
 const Square = (props: SquareProps) => {
     return (
         <td
-            className="w-20 h-20 text-4xl border border-black text-center"
+            className="w-24 h-24 border-8 border-[#B1D695] rounded-2xl cursor-pointer"
             onClick={props.handleClick}
         >
-            <svg width="100%" height="100%">
-                <text x="50%" y="50%" textAnchor="middle" dominantBaseline="central">
-                    {props.value}
-                </text>
-            </svg>
+            {props.value === 'X' ? <X /> : props.value === 'O' ? <O /> : ''}
         </td>
     );
 };

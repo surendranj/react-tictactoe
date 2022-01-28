@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Board from './Board';
 import GameMode from './GameMode';
-import Reset from '../components/buttons/reset';
+import Title from '../components/Title';
+import Reset from '../components/buttons/Reset';
 
 type GameState = {
     gameOver: boolean;
@@ -27,8 +28,8 @@ const Game = () => {
     };
 
     return (
-        <main className="bg-[#414141] h-screen">
-            <GameMode handleGameModeChange={handleGameModeChange} value={gameMode} />
+        <main className="bg-[#08070F] h-screen text-[#B1D695] flex flex-col justify-around py-8 items-center ">
+            <Title />
             <Board
                 gameMode={gameMode}
                 squares={squares}
@@ -38,7 +39,10 @@ const Game = () => {
                 gameState={gameState}
                 setGameState={setGameState}
             />
-            <Reset handleReset={handleReset} />
+            <div className="flex w-96 justify-around">
+                <GameMode handleGameModeChange={handleGameModeChange} value={gameMode} />
+                <Reset handleReset={handleReset} />
+            </div>
         </main>
     );
 };
