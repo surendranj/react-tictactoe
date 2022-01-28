@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Board from './Board';
 import GameMode from './GameMode';
 import Title from '../components/Title';
-import Reset from '../components/buttons/Reset';
+import Reset from './buttons/Reset';
 
 type GameState = {
     gameOver: boolean;
